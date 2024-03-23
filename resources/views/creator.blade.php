@@ -42,7 +42,7 @@
                 <a href="{{ route('menu') }}" class="text-sm font-semibold leading-6 text-gray-900">Menu</a>
                 <a href="{{ route('creator') }}" class="text-sm font-semibold leading-6 text-gray-900">Creator</a>
                 <a href="{{ route('profile') }}" class="text-sm font-semibold leading-6 text-gray-900">My Account</a>
-                <a href="#" class="text-2xl font-semibold leading-6 text-gray-900"><i
+                <a href="{{ route('cart') }}" class="text-2xl font-semibold leading-6 text-gray-900"><i
                         class="fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -209,6 +209,7 @@
 
     <script>
         // Add event listener to each checkbox
+        // Add event listener to each checkbox
         document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
             checkbox.addEventListener('change', function() {
                 if (this.checked) {
@@ -226,16 +227,22 @@
                     } else {
                         const size = document.querySelector('input[name="size"]:checked');
                         const pizzaSize = size.id;
-                        img.src =
-                            `/storage/ingredients/${ingredient}_${pizzaSize}.png`;
+                        img.src = `/storage/ingredients/${ingredient}_${pizzaSize}.png`;
                         console.log(ingredient + '_' + pizzaSize);
                     }
-                    // Append the image to the pizza_box element
                     document.getElementById('pizza_box').appendChild(img);
+                } else {
+                    const ingredient = this.id;
+                    const size = document.querySelector('input[name="size"]:checked');
+                    const pizzaSize = size.id;
+                    const imgToRemove = document.querySelector(
+                        `img[src="/storage/ingredients/${ingredient}_${pizzaSize}.png"]`);
+                    if (imgToRemove) {
+                        imgToRemove.remove();
+                    }
                 }
             });
         });
-
 
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('order');

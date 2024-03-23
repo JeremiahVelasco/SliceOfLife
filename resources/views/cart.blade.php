@@ -96,21 +96,38 @@
         </div>
     </header>
 
-    <div class="flex flex-col justify-center">
-        <div class="image p-10 mt-20">
-            <img class="rounded-full"
-                src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
-                alt="">
+    <div class="cart mt-20 flex flex-col items-center">
+        <span class="font-bold text-4xl mt-4"><i class="fa-solid fa-cart-shopping"></i> YOUR CART</span>
+
+        <div class="cart-container flex flex-col flex-wrap px-4 py-6 rounded-sm">
+            @foreach ($orders as $order)
+                <div class="order flex items-center py-4 px-7 rounded-md bg-slate-100 m-2">
+                    <span class="font-bold text-xl">Item {{ $order->id }}</span>
+                    <div id="order-details">
+                        <span><span class="font-semibold text-l"><i class="fa-solid fa-pizza-slice"></i> Size: </span>
+                            {{ $order->size }}</span>
+                        <span><span class="font-semibold text-l"><i class="fa-solid fa-bacon"></i> Protein: </span>
+                            {{ $order->protein }}</span>
+                        <span><span class="font-semibold text-l"><i class="fa-solid fa-leaf"></i> Greens: </span>
+                            {{ $order->greens }}</span>
+                        <span><span class="font-semibold text-l"><i class="fa-solid fa-cheese"></i> Cheese: </span>
+                            {{ $order->cheese }}</span>
+                    </div>
+                    <form action="{{ route('delete-order', $order->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <input type="hidden" name="order_id" value="{{ $order->id }}">
+                        <button type="submit"
+                            class="m-3 w-full px-5 py-3 text-base font-medium text-center text-dark-800 bg-yellow-300 rounded-lg hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-300 dark:hover:bg-yellow-400 dark:focus:ring-yellow-400">Remove
+                            item</button>
+                    </form>
+                </div>
+            @endforeach
+            <button onsubmit="deleteOrder()" id="delete-btn"
+                class="mt-4 w-full px-5 py-3 text-base font-medium text-center text-white bg-pizza rounded-lg hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-pizza dark:hover:bg-orange-400 dark:focus:ring-orange-400"
+                type="submit">Place order</button>
         </div>
-        <div class="details px-2 py-6 text-center">
-            <p class="text-xl font-semibold">Name</p>
-            <p class="text-s font-thin bg-slate-200 px-1.5 py-1">{{ $userData['name'] }}</p>
-            <p class="text-xl font-semibold">Email</p>
-            <p class="text-s font-thin bg-slate-200 px-1.5 py-1 mb-8">{{ $userData['email'] }}</p>
-            <a href="{{ route('logout') }}"
-                class="px-5 py-3 text-base font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-400">Log
-                out</a>
-        </div>
+
     </div>
     <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
         aria-hidden="true">

@@ -42,7 +42,7 @@
                     <a href="{{ route('creator') }}" class="text-sm font-semibold leading-6 text-gray-900">Creator</a>
                     <a href="{{ route('profile') }}" class="text-sm font-semibold leading-6 text-gray-900">My
                         Account</a>
-                    <a href="#" class="text-2xl font-semibold leading-6 text-gray-900"><i
+                    <a href="{{ route('cart') }}" class="text-2xl font-semibold leading-6 text-gray-900"><i
                             class="fa-solid fa-cart-shopping"></i></a>
                 </div>
                 <div class="hidden lg:flex lg:flex-1 lg:justify-end">

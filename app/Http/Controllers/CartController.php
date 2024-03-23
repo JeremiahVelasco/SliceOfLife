@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
@@ -35,12 +36,18 @@ class CartController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        $orders = Order::where('user_id', $id)
+        $userData = [
+            'id' => Auth::user()->id,
+            'name' => Auth::user()->name,
+            'email' => Auth::user()->email
+        ];
+
+        $orders = Order::where('user_id', $userData['id'])
             ->get();
 
-        return $orders;
+        return view('cart', compact('orders'));
     }
 
     /**

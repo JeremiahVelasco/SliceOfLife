@@ -48,3 +48,6 @@ Route::get('/profile', [ProfileController::class, 'show'])
 
 Route::delete('/profile/{id}', [CartController::class, 'destroy'])
     ->name('delete-order');
+
+Route::get('/cart', [CartController::class, 'show'])
+    ->name('cart');
