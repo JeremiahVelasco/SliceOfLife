@@ -104,9 +104,9 @@
         </div>
         <div class="details px-2 py-6 text-center">
             <p class="text-xl font-semibold">Name</p>
-            <p class="text-s font-thin bg-slate-200 px-1.5 py-1">{{ $userData['name'] }}</p>
+            <p class="text-s font-thin bg-slate-200 px-1.5 py-1 rounded-md">{{ $userData['name'] }}</p>
             <p class="text-xl font-semibold">Email</p>
-            <p class="text-s font-thin bg-slate-200 px-1.5 py-1 mb-8">{{ $userData['email'] }}</p>
+            <p class="text-s font-thin bg-slate-200 px-1.5 py-1 rounded-md mb-8">{{ $userData['email'] }}</p>
             <a href="{{ route('logout') }}"
                 class="px-5 py-3 text-base font-medium text-center text-white bg-red-500 rounded-lg hover:bg-red-400">Log
                 out</a>

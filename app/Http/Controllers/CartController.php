@@ -74,6 +74,6 @@ class CartController extends Controller
         $order = Order::where('id', $id)
             ->delete();
 
-        return redirect()->intended('profile');
+        return redirect()->intended('cart');
     }
 }

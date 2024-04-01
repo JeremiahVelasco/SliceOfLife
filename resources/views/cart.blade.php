@@ -96,7 +96,7 @@
         </div>
     </header>
 
-    <div class="cart mt-20 flex flex-col items-center">
+    <div class="cart mt-20 flex flex-col items-center" style="margin-top: 230px">
         <span class="font-bold text-4xl mt-4"><i class="fa-solid fa-cart-shopping"></i> YOUR CART</span>
 
         <div class="cart-container flex flex-col flex-wrap px-4 py-6 rounded-sm">
@@ -118,7 +118,7 @@
                         @method('DELETE')
                         <input type="hidden" name="order_id" value="{{ $order->id }}">
                         <button type="submit"
-                            class="m-3 w-full px-5 py-3 text-base font-medium text-center text-dark-800 bg-yellow-300 rounded-lg hover:bg-yellow-400 focus:ring-4 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-300 dark:hover:bg-yellow-400 dark:focus:ring-yellow-400">Remove
+                            class="m-3 w-full px-5 py-3 text-base font-medium text-center text-white bg-red-600 rounded-lg hover:bg-red-500 focus:ring-4 focus:outline-none focus:ring-red-500">Remove
                             item</button>
                     </form>
                 </div>

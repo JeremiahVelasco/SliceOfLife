@@ -192,7 +192,7 @@
                 </div>
 
                 <button type="submit"
-                    class="mt-4 w-full px-5 py-3 text-base font-medium text-center text-white bg-pizza rounded-lg hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-orange-300 dark:bg-pizza dark:hover:bg-orange-400 dark:focus:ring-orange-400">Add
+                    class="mt-4 w-full px-5 py-3 text-base font-medium text-center text-white bg-orange-100 rounded-lg hover:bg-orange-100 focus:ring-4 focus:outline-none focus:ring-orange-100 dark:bg-pizza dark:hover:bg-orange-400 dark:focus:ring-orange-400">Add
                     to Cart</button>
             </form>
         </div>

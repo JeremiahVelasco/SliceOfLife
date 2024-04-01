@@ -313,9 +313,8 @@
             <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
                 <li>
                     <div class="flex items-center gap-x-6">
-                        <img class="h-16 w-16 rounded-full"
-                            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                            alt="">
+                        <img class="rounded-full" src="storage/Shine.jpeg" alt=""
+                            style="max-width: 140px; max-height: 140px;">
                         <div>
                             <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Sunshine Homeres
                             </h3>
@@ -325,19 +324,21 @@
                 </li>
                 <li>
                     <div class="flex items-center gap-x-6">
-                        <img class="h-16 w-16 rounded-full" src="Cath.jpg" alt="">
+                        <img class="rounded-full" src="storage/Cath.jpg" alt=""
+                            style="max-width: 140px; max-height: 140px;">
                         <div>
                             <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Cath Morgate
                             </h3>
-                            <p class="text-sm font-semibold leading-6 text-pizza">Co-Founder / CEO</p>
+                            <p class="text-sm font-semibold leading-6 text-pizza">Co-Founder / Pizzaiola</p>
                         </div>
                     </div>
                 </li>
                 <li>
                     <div class="flex items-center gap-x-6">
-                        <img class="h-16 w-16 rounded-full"
-                            src="https://scontent.fmnl37-1.fna.fbcdn.net/v/t39.30808-6/310381514_5566297286747252_5988298711237259753_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF0eQlYMflPOMAYFBZ1NNQf-fjZUbjPB5H5-NlRuM8Hkb5UIJXZDTjIEmg4INTjFMmV5OxsyUAZPGs8GgJyVesC&_nc_ohc=3-UkSwq6odoAX9dT6vu&_nc_zt=23&_nc_ht=scontent.fmnl37-1.fna&oh=00_AfDLSgZ_Ijl6DF_fn9J1i_DVCvaIpov_HCB9Sa3lR5vv3g&oe=65FB52D2"
-                            alt="">
+                        <img class="rounded-full"
+                            src="https://scontent.fmnl25-4.fna.fbcdn.net/v/t39.30808-6/310381514_5566297286747252_5988298711237259753_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=g_vEyxT5dpwAX8TRu9Q&_nc_ht=scontent.fmnl25-4.fna&oh=00_AfAR2EpNBEUd-W8fxvS2y0HW1Y-at5gVi7grRgZjcJzecA&oe=660D8F92"
+                            alt="" style="max-width: 100px; max-height: 100px;">
+
                         <div>
                             <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Marc Julian
                                 Santos
@@ -348,9 +349,9 @@
                 </li>
                 <li>
                     <div class="flex items-center gap-x-6">
-                        <img class="h-16 w-16 rounded-full"
+                        <img class="rounded-full"
                             src="https://scontent.fmnl37-2.fna.fbcdn.net/v/t1.6435-9/69293799_2877628065583932_4941071531418583040_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEFDfYULKgHhAuHme5nt15PiV3mCqYlFtOJXeYKpiUW021_ll-3Hw1aIjw6BXwcC228joExtwR3ImPdqjIs-xbD&_nc_ohc=LpulU39JGIAAX8i-7nY&_nc_ht=scontent.fmnl37-2.fna&oh=00_AfDR9-ATOkWyes4Yd_hsIUu-vCb_J3L1xASS2ikffxSHQQ&oe=661DF1AE"
-                            alt="">
+                            alt="" style="max-width: 100px; max-height: 100px;">
                         <div>
                             <h3 class="text-base font-semibold leading-7 tracking-tight text-gray-900">Marcy Se
                             </h3>
